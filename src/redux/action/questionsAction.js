@@ -14,7 +14,7 @@ export const fetchQuestion = (countryId, classId, subjectId) => {
             loading: true,
         });
         var OPTIONS = {
-            url: `https://examd.herokuapp.com/questions/`,
+            url: `http://localhost:5000/questions/`,
             method: "post",
             data: {
                 countryId,
@@ -54,7 +54,7 @@ export const startExamQuestion = (questions) => {
             loading: true,
         });
         var OPTIONS = {
-            url: `https://examd.herokuapp.com/questions/start`,
+            url: `http://localhost:5000/questions/start`,
             method: "post",
             data: {
                 questions,

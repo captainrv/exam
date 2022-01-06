@@ -31,6 +31,22 @@
   width:45px;
   height:45px
 }
+.layout{
+  height: 328px;
+}
+.over{
+  max-height: 500px;
+  overflow-x: auto;
+  height: 280px;
+}
+.btnRound2{
+  border-radius:50%;
+  width:30px;
+  height:30px
+}
+.fonSize{
+  font-size: 12px;
+}
 
 @keyframes App-logo-spin {
   from {

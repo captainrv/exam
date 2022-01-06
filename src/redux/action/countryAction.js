@@ -7,7 +7,7 @@ export const fetchCountry = () => {
             loading: true,
         });
         var OPTIONS = {
-            url: `https://examd.herokuapp.com/country/`,
+            url: `http://localhost:5000/country/`,
             method: "get",
             headers: {
                 "content-type": "application/json",

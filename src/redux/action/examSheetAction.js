@@ -7,7 +7,7 @@ export const answerSheetUpdate = (answerKeyId,answerData,competitionId,status) =
             loading: true,
         });
         var OPTIONS = {
-            url: `https://examd.herokuapp.com/examsheet/`,
+            url: `http://localhost:5000/examsheet/`,
             method: "post",
             data: {answerKeyId,answerData,competitionId,status},
             headers: {
@@ -16,11 +16,11 @@ export const answerSheetUpdate = (answerKeyId,answerData,competitionId,status) =
         };
         axios(OPTIONS)
             .then((res) => {
-                console.log(res);
+                console.log(res.data.result);
                 dispatch({
                     type: EXAM_SHEET_UPDATE_SUCCESS,
                     loading: false,
-                    result: res.data.result[0],
+                    result: res.data.result,
                     msg: res.data.msg,
                     msgType: res.data.msgType,
                 });
@@ -44,7 +44,7 @@ export const fetchAnswerSheet = (competitionId) => {
             loading: true,
         });
         var OPTIONS = {
-            url: `https://examd.herokuapp.com/examsheet/${competitionId}`,
+            url: `http://localhost:5000/examsheet/${competitionId}`,
             method: "get",
             headers: {
                 "content-type": "application/json",

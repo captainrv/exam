@@ -7,7 +7,7 @@ export const fetchActiveCompetitions = () => {
             loading: true,
         });
         var OPTIONS = {
-            url: `https://examd.herokuapp.com/competitions/active`,
+            url: `http://localhost:5000/competitions/active`,
             method: "get",
             headers: {
                 "content-type": "application/json",

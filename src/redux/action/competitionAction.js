@@ -24,7 +24,7 @@ export const createCompetitions = (
             loading: true,
         });
         var OPTIONS = {
-            url: `https://examd.herokuapp.com/competitions/`,
+            url: `http://localhost:5000/competitions/`,
             method: "post",
             data: {
                 competitionName,
@@ -78,7 +78,7 @@ export const fetchCompetitions = () => {
             loading: true,
         });
         var OPTIONS = {
-            url: `https://examd.herokuapp.com/competitions/`,
+            url: `http://localhost:5000/competitions/`,
             method: "get",
             headers: {
                 "content-type": "application/json",
@@ -112,7 +112,7 @@ export const updateCompetitions = (competitionId, chooseQues) => {
             loading: true,
         });
         var OPTIONS = {
-            url: `https://examd.herokuapp.com/competitions/`,
+            url: `http://localhost:5000/competitions/`,
             method: "patch",
             data: {
                 competitionId, chooseQues

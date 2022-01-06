@@ -7,7 +7,7 @@ export const fetchSubject = () => {
             loading: true,
         });
         var OPTIONS = {
-            url: `https://examd.herokuapp.com/subject/`,
+            url: `http://localhost:5000/subject/`,
             method: "get",
             headers: {
                 "content-type": "application/json",
